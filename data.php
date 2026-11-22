@@ -12,11 +12,64 @@ $jumlah = mysqli_num_rows($hasil);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #333333;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        .inline {
+            display: inline-block;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
 <body>
     <table>
         <tr>
-            <th>No.Anggota</th><th>Nama Lengkap</th><th>Email</th><th>No.HP</th><th>Jenis Anggota</th><th>Alamat</th><th>Aksi</th>
+            <th>Id</th><th>No.Anggota</th><th>Nama Lengkap</th><th>Email</th><th>No.HP</th><th>Jenis Anggota</th><th>Alamat</th><th>Aksi</th>
         </tr>
         <?php $no = 1; while ($baris = mysqli_fetch_assoc($hasil)) { ?>
         <tr>
