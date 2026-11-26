@@ -25,6 +25,9 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
         <p class="sukses">Data anggota berhasil disimpan.</p>
         <?php } ?>
         
+    <form action="data.php" method="post">
+        <button type="submit">Lihat Data Anggota</button>
+    </form>    
     <form action="proses_anggota.php" method="post">
         <label for="no_anggota">No. Anggota</label><br>
         <input type="text" id="no_anggota" name="no_anggota"><br>
